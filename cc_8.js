@@ -32,3 +32,11 @@ function calculateRentalCost(days, carType, insurance = false) { //Establishes c
 };
 calculateRentalCost(3, "Economy", true); //Generates an output of $180
 calculateRentalCost(5, "Luxury", false); //Generates an output of $500
+
+//Task 5: Returning Values
+function calculateLoanPayment(principle, rate, time) { //Establishes calculateLoanPayment as a function
+    let totalPayment = principle + (principle * rate * time); //Establishes the equation to calculate the total loan payment
+    return `Total Payment: $${totalPayment.toFixed(2)}` //Returns the value calculated by the equation and displays it as a template literal in the console
+};
+console.log(calculateLoanPayment(1000, 0.05, 2)); //Generates an output of $6050.00
+console.log(calculateLoanPayment(5000, 0.07, 3)); //Generates an output of $1100.00
