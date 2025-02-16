@@ -13,3 +13,13 @@ const calculateDiscount = function(price, discountRate) { //Establishes calculat
 };
 calculateDiscount(100, 0.2); //Generates an output of $80.00
 calculateDiscount(250, 0.15); //Generates an output of $212.50
+
+//Task 3: Arrow Function
+const calculateServiceFee = (amount, serviceType) => { //Establishes the calculate service fee function
+    if (serviceType === "Premium") serviceFee = amount * 0.15; //Sets the equation for a Premium Servicetype
+    else if (serviceType === "Standard") serviceFee = amount * 0.10; //Sets the equation for a Standard Servicetype
+    else amount * 0.05; //Sets the equation for a Basic Servicetype
+    console.log(`Service Fee: $${serviceFee.toFixed(2)}`); //Logs the results of the equation to the console a a template literal
+};
+calculateServiceFee(200, "Premium"); //Generates an output of $30.00
+calculateServiceFee(500, "Standard"); //Generates an output of $50.00
