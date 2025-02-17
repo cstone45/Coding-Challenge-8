@@ -60,3 +60,11 @@ function createCartTracker() { //Establishes the Cart Tracker Function
 let cart = createCartTracker(); //establishes the cart tracker for the test variables
 console.log(cart(20)); //Adds 20 units to the cart to generate an output of $20
 console.log(cart(35)); //Adds 35 units to the cart to generate an output of $55
+
+//Task 8: Recursion in JavaScript
+function calculateSavings(years, amount) { //Establishes the calculateSavings function
+    if (years >= 10) return amount; //Establishes the Base Case for the situation, creating a cutoff at 10 years
+    return calculateSavings(years + 1, amount * 1.05); //Establishes the formula used to calculate the growth in profit at a margin of 5%
+}
+console.log(`Projected Savings: $${calculateSavings(8, 1000).toFixed(2)}`); //Generates an output of $1102.50 fixed to 2 decimal places
+console.log(`Projected Savings: $${calculateSavings(5, 5000).toFixed(2)}`); //Generates an output of $6381.41 fixed to 2 decimal places
