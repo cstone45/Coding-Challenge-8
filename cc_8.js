@@ -48,3 +48,15 @@ function filterLargeTransactions(transactions, filterFunction) { //Establishes t
 };
 let transactions = [200, 1500, 3200, 800, 2500]; //Establishes the intial list of transactions
 filterLargeTransactions(transactions, amount => amount > 1000); //Filters out all transactions less than 1000 and logs the results to the console
+
+//Task 7: Closures
+function createCartTracker() { //Establishes the Cart Tracker Function
+    let totalCartValue = 0; //Sets the initial value of the cart
+    return function(cart) { //Creates the function which will allow the formula to add units to the cart to be executed
+        totalCartValue += cart; //Establishes the formula which will log the total value in the cart and increase it as more units are added
+        return `Total Cart Value: $${totalCartValue}`; //Logs the total cart value to the console as a template literal
+    };
+}
+let cart = createCartTracker(); //establishes the cart tracker for the test variables
+console.log(cart(20)); //Adds 20 units to the cart to generate an output of $20
+console.log(cart(35)); //Adds 35 units to the cart to generate an output of $55
